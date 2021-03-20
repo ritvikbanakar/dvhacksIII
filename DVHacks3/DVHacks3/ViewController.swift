@@ -13,6 +13,10 @@ struct defaultsKeys {
     static let friend1_name = "friend1_name"
     static let friend1_phone = "friend1_phone"
     static let has_signed_up = "has_signed_up"
+    
+    static let time_trial_1 = "TT1"
+    static let time_trial_2 = "TT2"
+    static let time_trial_3 = "TT3"
 }
 
 class ViewController: UIViewController {
@@ -60,7 +64,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let sign_up_status = defaults.string(forKey: defaultsKeys.has_signed_up) {
-            signed_up = true
+            signed_up = false
         }
         prep_second_animation()
         if(signed_up){

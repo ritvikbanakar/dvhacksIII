@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F01032926067F9000BB3CDC /* TimeTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01032826067F9000BB3CDC /* TimeTestVC.swift */; };
 		1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3726058A900015FB53 /* AppDelegate.swift */; };
 		1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3926058A900015FB53 /* SceneDelegate.swift */; };
 		1F962F3C26058A900015FB53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3B26058A900015FB53 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F01032826067F9000BB3CDC /* TimeTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTestVC.swift; sourceTree = "<group>"; };
 		1F962F3426058A900015FB53 /* DVHacks3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVHacks3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F962F3726058A900015FB53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F962F3926058A900015FB53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				1F962F4026058A910015FB53 /* Assets.xcassets */,
 				1F962F4226058A910015FB53 /* LaunchScreen.storyboard */,
 				1F962F4526058A910015FB53 /* Info.plist */,
+				1F01032826067F9000BB3CDC /* TimeTestVC.swift */,
 			);
 			path = DVHacks3;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				1F962F3C26058A900015FB53 /* ViewController.swift in Sources */,
 				1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */,
 				1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */,
+				1F01032926067F9000BB3CDC /* TimeTestVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,11 +443,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SPH4452SM;
 				INFOPLIST_FILE = DVHacks3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sid.DVHacks3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.DVHacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,11 +463,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SPH4452SM;
 				INFOPLIST_FILE = DVHacks3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sid.DVHacks3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sid.DVHacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
