@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  DVHacks3
 //
-//  Created by Sid on 3/19/21.
+//  Created by Vidit Agrawal on 3/20/21.
 //
 
 import UIKit
@@ -49,6 +49,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         self.hideKeyboardWhenTappedAround()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if(self.signed_up){ self.show_test()  }
@@ -171,7 +172,10 @@ class ViewController: UIViewController {
             
         }, completion: nil)
         
+
     }
+    
+
 
     @IBAction func doneButtonPressed(_ sender: Any) {
         if(!is_done){
@@ -276,4 +280,5 @@ extension UIView {
         animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
         layer.add(animation, forKey: "shake")
     }
+
 }
