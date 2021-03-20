@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let sign_up_status = defaults.string(forKey: defaultsKeys.has_signed_up) {
-            signed_up = false
+            signed_up = true
         }
         prep_second_animation()
         if(signed_up){
