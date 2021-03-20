@@ -19,7 +19,7 @@ struct defaultsKeys {
     static let time_trial_3 = "TT3"
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, TimeTestResultDelegate {
     
     let defaults = UserDefaults.standard
     
@@ -45,11 +45,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var test3View: UIView!
     @IBOutlet weak var test3Result: UIView!
-
-    @IBOutlet weak var test4View: UIView!
-    @IBOutlet weak var test4Result: UIView!
     
     @IBOutlet weak var testButton: UIButton!
+    
+    
+    //For Test Completion
+    var test1Complete = false
+    var test2Complete = false
+    var test3Complete = false
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +68,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let sign_up_status = defaults.string(forKey: defaultsKeys.has_signed_up) {
-            signed_up = false
+            signed_up = true
         }
         prep_second_animation()
         if(signed_up){
@@ -80,7 +84,6 @@ class ViewController: UIViewController {
         test1View.alpha = 0
         test2View.alpha = 0
         test3View.alpha = 0
-        test4View.alpha = 0
         testButton.alpha = 0
     }
     
@@ -107,7 +110,6 @@ class ViewController: UIViewController {
         test1View.transform = up_50_px
         test2View.transform = up_50_px
         test3View.transform = up_50_px
-        test4View.transform = up_50_px
         testButton.transform = up_50_px
         let offset = 0.5
         let duration = 1.0
@@ -127,12 +129,8 @@ class ViewController: UIViewController {
             self.test3View.transform = CGAffineTransform.identity
         }, completion: nil)
         
-        UIView.animate(withDuration: duration, delay: 1.5 + offset*3, options: .curveLinear, animations: {
-            self.test4View.alpha = 1
-            self.test4View.transform = CGAffineTransform.identity
-        }, completion: nil)
         
-        UIView.animate(withDuration: duration, delay: 1.5 + offset*4, options: .curveLinear, animations: {
+        UIView.animate(withDuration: duration, delay: 1.5 + offset*3, options: .curveLinear, animations: {
             self.testButton.alpha = 1
             self.testButton.transform = CGAffineTransform.identity
         }, completion: nil)
@@ -228,6 +226,32 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func testButtonPressed(_ sender: Any) {
+        if(!test1Complete){
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newvc = storyboard.instantiateViewController(identifier: "timeTest") as! TimeTestVC
+            newvc.modalPresentationStyle = .overFullScreen
+            newvc.timeResultDelegate = self
+            self.present(newvc, animated: true, completion: nil)
+        
+        } else if(!test2Complete){
+            //Go to test2
+        } else if(!test3Complete){
+            //Go to test3
+        }
+    }
+    
+    func didPassTest(isDrunk: Bool) {
+        if(isDrunk){
+            test1Result.backgroundColor = UIColor(named: "Fail Color")
+        } else {
+            test1Result.backgroundColor = UIColor(named: "Pass Color")
+        }
+        test1Complete = true
+    }
+    
     
     func shift_left(){
         var location_right = CGAffineTransform(translationX: 400, y: 0)

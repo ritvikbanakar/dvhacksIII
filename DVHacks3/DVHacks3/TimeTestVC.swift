@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TimeTestResultDelegate{
+    func didPassTest(isDrunk: Bool)
+}
+
 class TimeTestVC: UIViewController {
 
     @IBOutlet weak var promptLabel: UILabel!
@@ -17,6 +21,7 @@ class TimeTestVC: UIViewController {
     var initialTime = 0
     var repitionAmount = 3
     let tolerance = 1.5
+    var timeResultDelegate: TimeTestResultDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
         testingButton.addTarget(self, action: #selector(buttonDown), for: .touchDown)
@@ -42,6 +47,7 @@ class TimeTestVC: UIViewController {
             } else {
                 write_data()
             }
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -58,9 +64,9 @@ class TimeTestVC: UIViewController {
         let deviation = sqrt(Double(variance))
         
         if(mean + Int(tolerance * deviation) < currentTime || mean - Int(tolerance * deviation) > currentTime){
-            //homie is drunk
+            timeResultDelegate.didPassTest(isDrunk: true)
         } else {
-            //homie is sober
+            timeResultDelegate.didPassTest(isDrunk: false)
         }
         
         print(trial1)
