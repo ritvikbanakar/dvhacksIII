@@ -16,11 +16,10 @@ class TimeTestVC: UIViewController {
     @IBOutlet weak var promptLabel: UILabel!
     @IBOutlet weak var testingButton: UIButton!
     let defaults = UserDefaults.standard
-    var isTest = false
-    var timeValues: [Int] = []
     var initialTime = 0
     var repitionAmount = 3
-    let tolerance = 1.5
+    let tolerance = 4
+    let time_value = 30
     var timeResultDelegate: TimeTestResultDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,65 +29,43 @@ class TimeTestVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let time_data = defaults.string(forKey: defaultsKeys.time_trial_1) {
-            isTest = true
-            repitionAmount = 1
-        }
     }
     
     @objc func buttonUp(_ sender: UIButton) {
         let difference = Int(Date().millisecondsSince1970) - initialTime
         let diff_sec = difference/1000
-        timeValues.append(diff_sec)
-        if(timeValues.count == repitionAmount){
-            testingButton.isHidden = true
-            if(isTest){
-                analyze_data()
-            } else {
-                write_data()
-                timeResultDelegate.didPassTest(isDrunk: false, testNumber: 1)
-
-            }
-            self.dismiss(animated: true, completion: nil)
-        }
+//        timeValues.append(diff_sec)
+//        if(timeValues.count == repitionAmount){
+//            testingButton.isHidden = true
+//            if(isTest){
+        analyze_data(time: diff_sec)
+//            } else {
+//                write_data()
+//                timeResultDelegate.didPassTest(isDrunk: false, testNumber: 1)
+//
+//            }
+        self.dismiss(animated: true, completion: nil)
+//        }
     }
     
-    func analyze_data(){
-        let trial1 = defaults.integer(forKey: defaultsKeys.time_trial_1)
-        let trial2 = defaults.integer(forKey: defaultsKeys.time_trial_2)
-        let trial3 = defaults.integer(forKey: defaultsKeys.time_trial_3)
-        let currentTime = timeValues[0]
-        
-        
-        let mean = (trial1 + trial2 + trial3)/3
-        let square_sum = (trial1 - mean)^2 + (trial2 - mean)^2 + (trial3 - mean)^2
-        let variance = square_sum/3
-        let deviation = sqrt(Double(variance))
-        
-        if(mean + Int(tolerance * deviation) < currentTime || mean - Int(tolerance * deviation) > currentTime){
+    func analyze_data(time: Int){
+        if(time_value + tolerance < time || time_value - tolerance > time){
             timeResultDelegate.didPassTest(isDrunk: true, testNumber: 1)
         } else {
             timeResultDelegate.didPassTest(isDrunk: false,  testNumber: 1)
         }
-        
-        print(trial1)
-        print(trial2)
-        print(trial3)
-        print(timeValues[0])
-        
+
             
     }
         
     
-    func write_data(){
-        defaults.set(timeValues[0], forKey: defaultsKeys.time_trial_1)
-        defaults.set(timeValues[1], forKey: defaultsKeys.time_trial_2)
-        defaults.set(timeValues[2], forKey: defaultsKeys.time_trial_3)
-        print("written")
-    }
     
     @objc func buttonDown(_ sender: UIButton) {
         initialTime = Int(Date().millisecondsSince1970)
+        UIView.animate(withDuration: 0.5, animations: {
+            self.testingButton.transform = CGAffineTransform(scaleX: 2, y: 4)
+            self.testingButton.layer.cornerRadius = 20
+        })
     }
     
 

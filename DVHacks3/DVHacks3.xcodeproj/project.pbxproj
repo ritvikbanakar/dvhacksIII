@@ -18,6 +18,8 @@
 		1F717C472606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F717C462606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf */; };
 		1F717C572606F41B00CAD5EA /* SoberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C562606F41B00CAD5EA /* SoberVC.swift */; };
 		1F717C5C2606F42500CAD5EA /* DrunkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C5B2606F42500CAD5EA /* DrunkVC.swift */; };
+		1F717C6026070B7400CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F717C462606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf */; };
+		1F717C6C26070B7400CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F717C462606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf */; };
 		1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3726058A900015FB53 /* AppDelegate.swift */; };
 		1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3926058A900015FB53 /* SceneDelegate.swift */; };
 		1F962F3C26058A900015FB53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3B26058A900015FB53 /* ViewController.swift */; };
@@ -317,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F717C6026070B7400CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F717C6C26070B7400CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

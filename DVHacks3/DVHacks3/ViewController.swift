@@ -38,6 +38,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
     @IBOutlet weak var friend_nameTF: UITextField!
     @IBOutlet weak var friend_phoneTF: UITextField!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var promptLabel: UILabel!
     
     //For Test
     @IBOutlet weak var testView: UIView!
@@ -119,23 +120,23 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         let offset = 0.5
         let duration = 1.0
         
-        UIView.animate(withDuration: duration, delay: 1.5, options: .curveLinear, animations: {
+        UIView.animate(withDuration: duration, delay: 1, options: .curveLinear, animations: {
             self.test1View.alpha = 1
             self.test1View.transform = CGAffineTransform.identity
         }, completion: nil)
         
-        UIView.animate(withDuration: duration, delay: 1.5 + offset, options: .curveLinear, animations: {
+        UIView.animate(withDuration: duration, delay: 1 + offset, options: .curveLinear, animations: {
             self.test2View.alpha = 1
             self.test2View.transform = CGAffineTransform.identity
         }, completion: nil)
         
-        UIView.animate(withDuration: duration, delay: 1.5 + offset*2, options: .curveLinear, animations: {
+        UIView.animate(withDuration: duration, delay: 1 + offset*2, options: .curveLinear, animations: {
             self.test3View.alpha = 1
             self.test3View.transform = CGAffineTransform.identity
         }, completion: nil)
         
         
-        UIView.animate(withDuration: duration, delay: 1.5 + offset*3, options: .curveLinear, animations: {
+        UIView.animate(withDuration: duration, delay: 1 + offset*3, options: .curveLinear, animations: {
             self.testButton.alpha = 1
             self.testButton.transform = CGAffineTransform.identity
         }, completion: nil)
@@ -197,6 +198,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
     
             is_done = !is_done
             doneButton.setTitle("Done", for: .normal)
+            promptLabel.text = "Please input a friend's name and phone number"
             shift_left()
         } else{
             var name = friend_nameTF.text!
@@ -314,9 +316,12 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         friend_phoneTF.transform = location_right
         
         UIView.animate(withDuration: 2, animations: {
-            self.view.backgroundColor = UIColor(named: "Background ColorV2")
-            self.friend_phoneTF.backgroundColor = UIColor(named: "Background Color")
-            self.friend_nameTF.backgroundColor = UIColor(named: "Background Color")
+            self.view.backgroundColor = .black
+            self.friend_phoneTF.backgroundColor = .white
+            self.friend_nameTF.backgroundColor = .white
+            self.friend_nameTF.textColor = .black
+            self.friend_phoneTF.textColor = .black
+            self.promptLabel.textColor = .white
             
             self.friend_phoneTF.transform = CGAffineTransform.identity
             self.friend_nameTF.transform = CGAffineTransform.identity
