@@ -7,7 +7,11 @@
 
 import UIKit
 
+
+
 class DrunkVC: UIViewController {
+    
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +20,17 @@ class DrunkVC: UIViewController {
     }
     
 
+    @IBAction func callContact(_ sender: Any) {
+        var number = defaults.string(forKey: defaultsKeys.friend1_phone)
+        number = "tel://" + number!
+        var url = URL(string: number!)
+        UIApplication.shared.openURL(url!)
+    }
+    
+    @IBAction func repeatTest(_ sender: Any) {
+        
+        
+    }
     /*
     // MARK: - Navigation
 

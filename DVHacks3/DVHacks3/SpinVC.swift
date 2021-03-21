@@ -39,7 +39,6 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
     var numErrors = 0
     var spinResult: SpinARTestResult!
     var starting_time = 0
-    var is_test = false
     let margin = 1.5
     let defaults = UserDefaults.standard
 
@@ -111,22 +110,6 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
                         sleep(1)
                     }
                 
-                    let final_time = Int(Date().timeIntervalSince1970)
-                    print(final_time)
-                    print(self.starting_time)
-                    let time_diff = final_time - self.starting_time
-                    let duration = self.defaults.integer(forKey: defaultsKeys.time_to_spin)
-                    print("DURATIONNNN \(duration)")
-                    if(duration > 0){
-                        if(Double(duration) * self.margin < Double(time_diff) || Double(duration)/self.margin > Double(time_diff)){
-                            self.spinResult.didPassTest(isDrunk: true, testNumber: 2)
-                        } else {
-                            self.spinResult.didPassTest(isDrunk: false, testNumber: 2)
-                        }
-                    } else {
-                        self.defaults.set(time_diff, forKey: defaultsKeys.time_to_spin)
-                    }
-                    
                     self.spinResult.didPassTest(isDrunk: false, testNumber: 2)
                     self.dismiss(animated: true, completion: nil)
                 })

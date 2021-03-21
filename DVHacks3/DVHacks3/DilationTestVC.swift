@@ -56,23 +56,12 @@ class DilationTestVC: UIViewController, UIImagePickerControllerDelegate & UINavi
         
         let result = dilation_data!.classLabel
         
-        let dilated_result = defaults.double(forKey: defaultsKeys.dilated_percent)
-        print(dilation_data!.classLabelProbs["dilated"]!)
-        print(dilated_result)
         
-        if(dilated_result > 0.0){
-            if(dilated_result + 0.5 < dilation_data!.classLabelProbs["dilated"]!){
-                print("WE ARE IN HERE WE'VE FINNA PASSED")
-                dilationResult.didPassTest(isDrunk: true, testNumber: 3)
-
-            } else {
-                print("WE ARE IN HERE WE'VE FINNA FAILED")
-                dilationResult.didPassTest(isDrunk: false, testNumber: 3)
-
-
-            }
-        } else{
-            defaults.set(dilation_data!.classLabelProbs["dilated"], forKey: defaultsKeys.dilated_percent)
+        let dilute_prob = dilation_data!.classLabelProbs["dilated"]!
+        
+        if(dilute_prob > 0.5){
+            dilationResult.didPassTest(isDrunk: true, testNumber: 3)
+        } else {
             dilationResult.didPassTest(isDrunk: false, testNumber: 3)
 
         }

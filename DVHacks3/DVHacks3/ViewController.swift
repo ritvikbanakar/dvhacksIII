@@ -266,6 +266,11 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
                 var storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let newvc = storyboard.instantiateViewController(identifier: "drunkvc") as! DrunkVC
                 newvc.modalPresentationStyle = .overFullScreen
+                test1Complete = false
+                test2Complete = false
+                test3Complete = false
+                result = 0
+                testButton.setTitle("take test.", for: .normal)
                 self.present(newvc, animated: true, completion: nil)
             }
         }
@@ -285,6 +290,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
             case 3:
                 test3Result.backgroundColor = UIColor(named: "Fail Color")
                 test3Complete = true
+                self.testButton.setTitle("get results.", for: .normal)
             default:
                 print("something went wrong")
             }
@@ -300,6 +306,8 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
             case 3:
                 test3Result.backgroundColor = UIColor(named: "Pass Color")
                 test3Complete = true
+                self.testButton.setTitle("get results.", for: .normal)
+
             default:
                 print("something went wrong")
             }
