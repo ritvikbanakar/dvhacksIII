@@ -11,15 +11,14 @@ import UIKit
 
 class DrunkVC: UIViewController {
     
-    let defaults = UserDefaults.standard
+    let defaults = UserDefaults.standard //Gets user defaults to get the friend phone number
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
+    //Calls friend contact when pressed
     @IBAction func callContact(_ sender: Any) {
         var number = defaults.string(forKey: defaultsKeys.friend1_phone)
         number = "tel://" + number!
@@ -27,9 +26,9 @@ class DrunkVC: UIViewController {
         UIApplication.shared.openURL(url!)
     }
     
+    //Goes back to testing home page when pressed
     @IBAction func repeatTest(_ sender: Any) {
-        
-        
+        self.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

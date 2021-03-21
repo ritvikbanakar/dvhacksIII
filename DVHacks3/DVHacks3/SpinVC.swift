@@ -11,36 +11,34 @@ import RecordButton
 import SceneKit
 import ARKit
 import SpeechRecognizerButton
-
+//Protocol to edit the main view functionality
 protocol SpinARTestResult{
     func didPassTest(isDrunk: Bool, testNumber: Int)
 }
 
 class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
-    var button: SFButton!
-    var locateButton: UIButton!
-    var currentHeading: CLLocationDirection!
-    var initHeading: CLLocationDirection!
-    var startingHeading: CLLocationDirection = -10
-    var lm:CLLocationManager!
-    var progressTimer : Timer!
-    var progress : CGFloat = 0
-    var passed_half = false
-    var recordButton : RecordButton!
-    var stop_updated = false
-    var rounds = 0
-    var progressLabel: UILabel!
+    var button: SFButton! //Round Progress bar
+    var locateButton: UIButton! //Locate button for AR object
+    var currentHeading: CLLocationDirection! //Heading of the phone at any given moment
+    var initHeading: CLLocationDirection! //Heading of the phone the moment before this one
+    var startingHeading: CLLocationDirection = -10 //Initial heading of the phone, set to a negative value so we know that is has or hasn't been set
+    var lm:CLLocationManager! //Location manager to get the location
+    var progressTimer : Timer! //Progress timer
+    var progress : CGFloat = 0 //Progress percentage
+    var passed_half = false //Passed 180 degrees so we know that we are nearly about to make a full round
+    var recordButton : RecordButton! //Recording button inside the round progress bar
+    var stop_updated = false //When the button is released, stop updating
+    var rounds = 0 //Number of rounds
+    var progressLabel: UILabel! //Progress Label
     var visualEffectView: UIVisualEffectView!
-    var sceneView: ARSCNView!
+    var sceneView: ARSCNView! //Scene view for AR
     var textLabel: UILabel!
-    var e:EchoAR!;
-    var s = [[0.25,0,0,0],[0,0.25,0,0],[0,0,0.25,0],[0,0,0,1]]
-    var successButton: UIButton!
-    var numErrors = 0
-    var spinResult: SpinARTestResult!
-    var starting_time = 0
-    let margin = 1.5
-    let defaults = UserDefaults.standard
+    var e:EchoAR!; //Echo AR module
+    var s = [[0.25,0,0,0],[0,0.25,0,0],[0,0,0.25,0],[0,0,0,1]] //Scaling of the AR object
+    var successButton: UIButton! //Button that shows success
+    var numErrors = 0 //Number of errors that the user has made
+    var spinResult: SpinARTestResult! //Instantiation of the spin delegate
+    let defaults = UserDefaults.standard //User defaults
 
     
     override func viewDidLoad() {
@@ -81,7 +79,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         
         }
         blurAnimator.startAnimation()
-        
+        //Sets the buttons and views to the screen
         button = SFButton(frame: CGRect(x: self.view.frame.width / 2 - 50,y: self.view.frame.height / 2 + 100 ,width: 100,height: 100))
         button.setImage(UIImage(named: "mic"), for: .normal)
         button.isHidden = true
@@ -95,7 +93,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         button.resultHandler = {
             var up_50_px = CGAffineTransform(translationX: 0, y: -500)
             self.textLabel.text = $1?.bestTranscription.formattedString
-            
+            //Gets NLP text and sees if it matches the correct value to determine correct or not
             if(self.textLabel.text == "Building")
             {
                 
@@ -127,6 +125,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
             }
                     
         }
+        //handles errors with the recording button
         button.errorHandler = {
                    guard let error = $0 else {
                        self.textLabel.text = "Unknown error."
@@ -157,6 +156,8 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
                        self.textLabel.text = error.localizedDescription
                    }
                }
+        
+        //Sets the locate button to the view
         locateButton = UIButton(frame: CGRect(x: self.view.frame.width / 2 - 100, y: self.view.frame.height / 2 + 300, width: 200, height: 30))
         locateButton.backgroundColor = .black
         locateButton.setTitleColor(.white, for: .normal)
@@ -166,7 +167,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         self.view.addSubview(locateButton)
         locateButton.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
 
-        
+        //Sets the text label to the view
         textLabel = UILabel(frame: CGRect(x: self.view.frame.width/2 , y: self.view.frame.height / 2 - 200, width: 300, height: 31))
         textLabel.center = CGPoint(x: self.view.frame.width / 2, y: self.view.frame.height / 2)
         textLabel.textAlignment = .center
@@ -184,7 +185,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         lm.delegate = self
       
         
-        
+        //Adds the progress label and record button to the view directly
         recordButton = RecordButton(frame: CGRect(x: self.view.frame.width / 2 - 100,y: self.view.frame.height / 2 - 100,width: 200,height: 200))
         view.addSubview(recordButton)
         
@@ -202,7 +203,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
     }
     
    
-
+    //Starts an animation when the button is tapped to create a blur and show the visual effect view
     @objc func buttonTapped()
     {
         
@@ -223,11 +224,10 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         button.isUserInteractionEnabled = true
         
     }
+    
+    //Begins recording location
     @objc func record() {
-//        self.progressTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)\
-        starting_time = Int(Date().millisecondsSince1970)
-        print("WE ARE IN HERE")
-        print(starting_time)
+        
         lm.startUpdatingHeading()
         stop_updated = false
         progressLabel.isHidden = false
@@ -236,6 +236,8 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         
         
     }
+    
+    //When the user lets go of the rotation button, it will stop the rotation view
     @objc func stop() {
         recordButton.setProgress(0)
         stop_updated = true
@@ -259,17 +261,18 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    //Updates progress, algorithm to find the angle traversed and the percent traversed
     func updateProgress() {
-//        print("updating")
+
         var angle_traversed = 0
         if(currentHeading >= startingHeading){
-            angle_traversed = Int(currentHeading) - Int(startingHeading)
+            angle_traversed = Int(currentHeading) - Int(startingHeading) //If the currentHeading is greater than starting, then subtract them
         } else {
-            angle_traversed = 360 - Int(startingHeading) + Int(currentHeading)
+            angle_traversed = 360 - Int(startingHeading) + Int(currentHeading) //If the current is less than the starting then offset it by adding 360
         }
         
-        progress = CGFloat(angle_traversed)/360.0
-//        print("Traversed \(angle_traversed)")
+        progress = CGFloat(angle_traversed)/360.0 //Finds the progress percentage
         if(!passed_half && angle_traversed > 180){
             passed_half = true
         }
@@ -282,6 +285,8 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
                 
             }
         }
+        
+        //Determines round amounts
         if(rounds == 1)
         {
             progressLabel.text = "1/3 rounds completed"
@@ -299,18 +304,14 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
             lm.stopUpdatingHeading()
            
         }
-        
+        //Sets progress
         recordButton.setProgress(progress)
            
            
            
     }
-//    func update_checkpoints(angle: Int){
-//        let margin = 5
-//        if(angle + margin > 90 && angle - margin < 90 ){
-//            if(checkPoints[0] == true && checkPoints[2] == false && checkPoints[3])
-//        }
-//    }
+    
+    //Updates headings whenever the GPS updates the values
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading)
     {
         
@@ -323,18 +324,14 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
             currentHeading = newHeading.trueHeading
         }
         
-//        print("Starting \(Int(startingHeading))")
-//        print("Current \(Int(currentHeading))")
         if(!stop_updated){
             updateProgress()
         }
 
         
     }
-    func truncate(places : Int, num: Double)-> Double {
-        return Double(floor(pow(10.0, Double(places)) * num)/pow(10.0, Double(places)))
-    }
-    
+
+    //Starting some functionality before the view starts
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -346,6 +343,7 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         sceneView.session.run(configuration)
     }
     
+    //Clean up for memory purposes after the view has disappeared
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -354,29 +352,4 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
     }
 
     // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-//    func session(_ session: ARSession, didFailWithError error: Error) {
-//        // Present an error message to the user
-//
-//    }
-//
-//    func sessionWasInterrupted(_ session: ARSession) {
-//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-//
-//    }
-//
-//    func sessionInterruptionEnded(_ session: ARSession) {
-//        // Reset tracking and/or remove existing anchors if consistent tracking is required
-//
-//    }
-
 }

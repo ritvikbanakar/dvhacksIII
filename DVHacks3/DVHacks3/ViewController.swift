@@ -7,77 +7,74 @@
 
 import UIKit
 
+//Keys to access user defaults (local iPhone storage)
 struct defaultsKeys {
     static let self_name = "self_name"
     static let self_phone = "self_phone"
     static let friend1_name = "friend1_name"
     static let friend1_phone = "friend1_phone"
     static let has_signed_up = "has_signed_up"
-    
-    static let time_trial_1 = "TT1"
-    static let time_trial_2 = "TT2"
-    static let time_trial_3 = "TT3"
-    
-    static let time_to_spin = "spin_time"
-    
-    static let dilated_percent = "dilation_percent"
 }
 
 class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult, DilationTestResult {
     
-    let defaults = UserDefaults.standard
-    
+    let defaults = UserDefaults.standard //instatiation of user defaults
     
     //For Sign Up
-    var signed_up = false
-    var is_done = false
-    var inputArrays: [String] = []
-    @IBOutlet weak var signUpBackgroundView: UIView!
-    @IBOutlet weak var self_nameTF: UITextField!
-    @IBOutlet weak var self_phoneTF: UITextField!
-    @IBOutlet weak var friend_nameTF: UITextField!
-    @IBOutlet weak var friend_phoneTF: UITextField!
-    @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var promptLabel: UILabel!
+    var signed_up = false //Boolean: whether the user has signed up or not, if the user has signed up, we will be able to skip the sign up and go straight to taking the test
+    var is_done = false //Boolean: Whether the user is done signing up. Once the user is done signing up we will continue on to the next screen (intoxication tests)
+    var inputArrays: [String] = [] //Arrays to store sign up data
+    
+    //For Sign up animations
+    @IBOutlet weak var signUpBackgroundView: UIView! //The sign up background view is the parent view that houses all sign up elements (buttons, labels, textfields)
+    @IBOutlet weak var self_nameTF: UITextField! // The name of the user using the application
+    @IBOutlet weak var self_phoneTF: UITextField! //The phone number of the user using the application
+    @IBOutlet weak var friend_nameTF: UITextField! //The name of the user's friend
+    @IBOutlet weak var friend_phoneTF: UITextField! //The phone number of the user's friend
+    @IBOutlet weak var doneButton: UIButton! //Button to move forward with the sign up process
+    @IBOutlet weak var promptLabel: UILabel! //Instruction label
     
     //For Test
-    @IBOutlet weak var testView: UIView!
-    @IBOutlet weak var test1View: UIView!
-    @IBOutlet weak var test1Result: UIView!
+    @IBOutlet weak var testView: UIView! //The parent view that houses all test elements
     
-    @IBOutlet weak var test2View: UIView!
+    @IBOutlet weak var test1View: UIView! //Long rectangle that holds the name of the test and the test result
+    @IBOutlet weak var test1Result: UIView! //Square that shows the result of the first test
+    
+    @IBOutlet weak var test2View: UIView! //Same as test1View and test1Result
     @IBOutlet weak var test2Result: UIView!
     
-    @IBOutlet weak var test3View: UIView!
+    @IBOutlet weak var test3View: UIView! //Same as test1View and test1Result
     @IBOutlet weak var test3Result: UIView!
     
-    @IBOutlet weak var testButton: UIButton!
+    @IBOutlet weak var testButton: UIButton! //Button to continue with tests, and get results.
     
     
-    //For Test Completion
+    //For Test Completion, decides whether the tests are complete or not
     var test1Complete = false
     var test2Complete = false
     var test3Complete = false
-    var result = 0
+    var result = 0 //Integer that will decide whether the person is intoxicated or not. Any test fail will decrease the result by 1, and a pass will increase the result by 1.
+    //A negative result means intoxicated, while a positive result is not intoxicated
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            if(self.signed_up){ self.show_test()  }
-            else{ self.show_sign_up_sequence()  }
+        self.hideKeyboardWhenTappedAround() //hides the keyboard when the user taps on the screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { //Waits for 1.5 seconds to continue with animations
+            if(self.signed_up){ self.show_test()  } //If the user as signed up, we're gonna show the tests and skip the sign up sequence
+            else{ self.show_sign_up_sequence()  } //If the user hasn't signed up we are going to show the sign up sequence and then the tests.
         }
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) { //This function is called before the view is shown, so we can do some background work to decide what to show
         super.viewWillAppear(animated)
-        if let sign_up_status = defaults.string(forKey: defaultsKeys.has_signed_up) {
+        if let sign_up_status = defaults.string(forKey: defaultsKeys.has_signed_up) { //Checks stored data to see if the user has signed up
             signed_up = true
         }
-        prep_second_animation()
-        if(signed_up){
+        prep_second_animation() //Preps the test animations, regardless of whether it is first or not
+        if(signed_up){ //Decide what action to take depending on whether the user has signed up or not
             hide_everything()
         } else{
             prep_animations()
@@ -86,6 +83,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
        
     }
     
+    //Makes all test elements invisible by turning the alpha to 0
     func prep_second_animation(){
         test1View.alpha = 0
         test2View.alpha = 0
@@ -93,6 +91,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         testButton.alpha = 0
     }
     
+    //Preps the sign up animation by turning all the alpha values to 0, so we can use animations to bring them back
     func prep_animations(){
         self_nameTF.alpha = 0
         self_phoneTF.alpha = 0
@@ -102,6 +101,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         testView.isHidden = true
     }
     
+    //If the user has signed up we will hide everything that is related to the sign up so we effectively skip this step
     func hide_everything(){
         self_nameTF.isHidden = true
         self_phoneTF.isHidden = true
@@ -111,57 +111,55 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         signUpBackgroundView.isHidden = true
     }
     
+    //This is where we will show the test views using animations
     func show_test(){
-        var up_50_px = CGAffineTransform(translationX: 0, y: 0)
-        test1View.transform = up_50_px
-        test2View.transform = up_50_px
-        test3View.transform = up_50_px
-        testButton.transform = up_50_px
-        let offset = 0.5
-        let duration = 1.0
+        let offset = 0.5 //Animation offset to make each small view appear a little after the one prior to it.
+        let duration = 1.0 //Duration of each animation
         
+        //Animations, turn the alpha to 1 to make it seem like they are "floating in"
         UIView.animate(withDuration: duration, delay: 1, options: .curveLinear, animations: {
             self.test1View.alpha = 1
-            self.test1View.transform = CGAffineTransform.identity
         }, completion: nil)
         
         UIView.animate(withDuration: duration, delay: 1 + offset, options: .curveLinear, animations: {
             self.test2View.alpha = 1
-            self.test2View.transform = CGAffineTransform.identity
         }, completion: nil)
         
         UIView.animate(withDuration: duration, delay: 1 + offset*2, options: .curveLinear, animations: {
             self.test3View.alpha = 1
-            self.test3View.transform = CGAffineTransform.identity
+            
         }, completion: nil)
         
         
         UIView.animate(withDuration: duration, delay: 1 + offset*3, options: .curveLinear, animations: {
             self.testButton.alpha = 1
-            self.testButton.transform = CGAffineTransform.identity
+            
         }, completion: nil)
         
     }
    
-    
+    //To show the sign up sequence we will need to show the initial animation.
     func show_sign_up_sequence(){
         initial_animation()
     }
     
+    //The initial animation will allow everything to "glide" down very slowly
     func initial_animation(){
         
-        var up_50_px = CGAffineTransform(translationX: 0, y: -10)
-        var scale_down = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        var up_10_px = CGAffineTransform(translationX: 0, y: -10) //Decides how much each item is gliding down
+        var scale_down = CGAffineTransform(scaleX: 0.95, y: 0.95) //The buttn will have a "zoom in" effect which is done by scaling it down and then scaling it up
         
-        self_nameTF.transform = up_50_px
+        //Applying the transformations to the objects
+        self_nameTF.transform = up_10_px
         self_nameTF.alpha = 0
         
-        self_phoneTF.transform = up_50_px
+        self_phoneTF.transform = up_10_px
         self_phoneTF.alpha = 0
         
         doneButton.transform = scale_down
         doneButton.alpha = 0
         
+        //Executing the animations to show the objects
         UIView.animate(withDuration: 1, animations: {
             
             self.self_nameTF.transform = CGAffineTransform.identity
@@ -180,11 +178,16 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         }, completion: nil)
         
     }
-
+    
+    
+    //Executing an action when the done button is pressed (only applies for sign up)
     @IBAction func doneButtonPressed(_ sender: Any) {
         if(!is_done){
+            //Gets the text from the fields
             var name = self_nameTF.text!
             var phone = self_phoneTF.text!
+            
+            //Shakes the text field if it is empty
             if(name.count == 0){
                 self_nameTF.shake()
                 return
@@ -193,16 +196,22 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
                 self_phoneTF.shake()
                 return
             }
+            
+            //Appends the data to the global array so it can be accessed and stored later
             inputArrays.append(name)
             inputArrays.append(phone)
     
-            is_done = !is_done
-            doneButton.setTitle("Done", for: .normal)
-            promptLabel.text = "Please input a friend's name and phone number"
-            shift_left()
+            
+            is_done = !is_done //changes the state of "is done"
+            doneButton.setTitle("Done", for: .normal) //Changes the title of the button
+            promptLabel.text = "Please input a friend's name and phone number" //Changes the prompt label to prompt for friend information
+            shift_left() //Executes a transition where the current items move to the left and the new field slide in from the right to the left.
         } else{
+            //get data from the friend data
             var name = friend_nameTF.text!
             var phone = friend_phoneTF.text!
+            //Shakes the text field if it is empty
+
             if(name.count == 0){
                 friend_nameTF.shake()
                 return
@@ -211,6 +220,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
                 friend_phoneTF.shake()
                 return
             }
+            //sets the data to the default iPhone local storage
             defaults.set(inputArrays[0], forKey: defaultsKeys.self_name)
             defaults.set(inputArrays[1], forKey: defaultsKeys.self_phone)
             defaults.set(name, forKey: defaultsKeys.friend1_name)
@@ -220,7 +230,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
             
             UIView.animate(withDuration: 1.5, delay: 0, options: .curveLinear, animations: {
                 self.signUpBackgroundView.alpha = 0
-                self.view.backgroundColor = UIColor(named: "Background Color")
+                self.view.backgroundColor = .white
 
             }, completion: {
                 (value: Bool) in
@@ -234,7 +244,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         
     }
     
-    
+    //Will cycle through each test once it is clicked that way we are able to do all the tests and get the results.
     @IBAction func testButtonPressed(_ sender: Any) {
         if(!test1Complete){
             var storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -276,6 +286,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         }
     }
     
+    //Function that is called from other ViewControllers to decide the color of the "result" view
     func didPassTest(isDrunk: Bool, testNumber: Int) {
         if(isDrunk){
             result -= 1
@@ -315,7 +326,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
         
     }
     
-    
+    //Function that will shift the text fields to the left, initiating the transition
     func shift_left(){
         var location_right = CGAffineTransform(translationX: 400, y: 0)
         var location_left = CGAffineTransform(translationX: -400, y: 0)
@@ -348,7 +359,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
     
 }
 
-
+//View controller extention to hide the keyboard when tapped
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -362,6 +373,7 @@ extension UIViewController {
 }
 
 
+//UIView Extension to shake it when called
 extension UIView {
     func shake() {
         let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")

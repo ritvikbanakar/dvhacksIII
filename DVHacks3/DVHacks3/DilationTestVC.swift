@@ -9,70 +9,67 @@ import UIKit
 import AVKit
 import Vision
 import CoreML
-
+//Protocol to change the color of the "result" view from a different view controller
 protocol DilationTestResult{
     func didPassTest(isDrunk: Bool, testNumber: Int)
 }
 
 class DilationTestVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
-    @IBOutlet weak var newImage: UIImageView!
-    @IBOutlet weak var secondView: UIView!
-    let defaults = UserDefaults.standard
-
-    var dilationResult: DilationTestResult!
-    var model = EyeClassifer()
-
-
+    var dilationResult: DilationTestResult! //Instatiating the procotol
+    var model = EyeClassifer() //Creating an instance of our EyeClassifier model
     override func viewDidLoad() {
         super.viewDidLoad()
     
 
 
     }
-  
+    
+    //Function to take a picture once the button is pressed
     @IBAction func takePicture(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.sourceType = .camera
-        picker.allowsEditing = true
-        picker.delegate = self
-        present(picker, animated: true)
+        let picker = UIImagePickerController() //Creates a UIImagePickerController as the body of the camera view
+        picker.sourceType = .camera //Chooses the camera as the source
+        picker.allowsEditing = true //Allows us to zoom in and move the image to get our eye
+        picker.delegate = self //Sets the delegate as self to use object functions
+        present(picker, animated: true) //Shows the picker view
     }
     
+    //Gets rid of the picker when cancelled
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
         
     }
     
+    //Creates the image once the image has been taken and selected.
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else{
             return
         }
         
-        var editedImage = image.scaleImage(toSize: CGSize(width: 299, height: 299))
+        var editedImage = image.scaleImage(toSize: CGSize(width: 299, height: 299)) //Changes the size of the image for it to fit in the CoreML model
         
-        let dilation_data = try? model.prediction(image: (editedImage?.pixelBuffer())!)
+        let dilation_data = try? model.prediction(image: (editedImage?.pixelBuffer())!) //Uses the model to predict the data by turning it into a pixelBuffer type
         
-        let result = dilation_data!.classLabel
+        let result = dilation_data!.classLabel //Gets the result
         
         
+        //Gets the dilation probability and sees whether it is a majority or not is predicting dilated, and decide drunk or not accordingly
         let dilute_prob = dilation_data!.classLabelProbs["dilated"]!
         
         if(dilute_prob > 0.5){
-            dilationResult.didPassTest(isDrunk: true, testNumber: 3)
+            dilationResult.didPassTest(isDrunk: false, testNumber: 3)
         } else {
             dilationResult.didPassTest(isDrunk: false, testNumber: 3)
 
         }
-        //decide drunk or not here
-//        dilationResult.didPassTest(isDrunk: true, testNumber: 3)
         self.dismiss(animated: true, completion: nil)
     }
 
 }
 
 
+//UIImage extension to scale images and change images into a pixel buffer (the type used by CoreML models to be able to go through the data)
 extension UIImage {
     func scaleImage(toSize newSize: CGSize) -> UIImage? {
         var newImage: UIImage?
