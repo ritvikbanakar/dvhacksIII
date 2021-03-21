@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/RecordButton/RecordButton.framework
+${BUILT_PRODUCTS_DIR}/SpeechRecognizerButton/SpeechRecognizerButton.framework

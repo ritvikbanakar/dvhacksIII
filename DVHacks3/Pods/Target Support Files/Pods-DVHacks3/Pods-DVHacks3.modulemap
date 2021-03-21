@@ -1,0 +1,6 @@
+framework module Pods_DVHacks3 {
+  umbrella header "Pods-DVHacks3-umbrella.h"
+
+  export *
+  module * { export * }
+}

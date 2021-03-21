@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TimeTestResultDelegate{
-    func didPassTest(isDrunk: Bool)
+    func didPassTest(isDrunk: Bool, testNumber: Int)
 }
 
 class TimeTestVC: UIViewController {
@@ -64,9 +64,9 @@ class TimeTestVC: UIViewController {
         let deviation = sqrt(Double(variance))
         
         if(mean + Int(tolerance * deviation) < currentTime || mean - Int(tolerance * deviation) > currentTime){
-            timeResultDelegate.didPassTest(isDrunk: true)
+            timeResultDelegate.didPassTest(isDrunk: true, testNumber: 1)
         } else {
-            timeResultDelegate.didPassTest(isDrunk: false)
+            timeResultDelegate.didPassTest(isDrunk: false,  testNumber: 1)
         }
         
         print(trial1)

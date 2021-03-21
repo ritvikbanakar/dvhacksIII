@@ -1,0 +1,20 @@
+PODS:
+  - RecordButton (1.0.2)
+  - SpeechRecognizerButton (0.2.0)
+
+DEPENDENCIES:
+  - RecordButton
+  - SpeechRecognizerButton
+
+SPEC REPOS:
+  trunk:
+    - RecordButton
+    - SpeechRecognizerButton
+
+SPEC CHECKSUMS:
+  RecordButton: 76677be0f4b94f8a387454a23b4b64bd9b6c0e51
+  SpeechRecognizerButton: 335b079463dcdce9dfb345ba670559c57c14e344
+
+PODFILE CHECKSUM: 1ac87e5c5de2a38a4c5141bbc75c47a779655575
+
+COCOAPODS: 1.8.4

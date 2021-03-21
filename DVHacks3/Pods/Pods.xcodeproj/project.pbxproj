@@ -1,0 +1,1177 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E3EBD64002D7F6F3D3ED9768053115C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		34DF34C02407D627DBDF518330CB7011 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0AF690F35BBAA97E2095A08C77421B /* RecordButton.swift */; };
+		35A1D124D045D7311DE2D4DCDF24E9EF /* SpeechRecognizerButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EFEE7AAE9911366004DFB8FF54A2961E /* SpeechRecognizerButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		360F5072628254B37EDB29E4C9E1D185 /* SpeechRecognizerButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7171733F723EEAFE05B11504977C5C8 /* SpeechRecognizerButton-dummy.m */; };
+		406A8C48ABC0222B16AEC8129817DCB5 /* Pods-DVHacks3Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46F132A5473AE60DF332FEF1EB4ACC2F /* Pods-DVHacks3Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		538F78855E27BD13B6272562F2D80A15 /* Pods-DVHacks3-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDA6177B1B21E3A4FDD76DE9E2DB4C03 /* Pods-DVHacks3-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61CC479DCC970D109401342E57CA56B5 /* Pods-DVHacks3Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6456565E320145222E8E320A24C84979 /* Pods-DVHacks3Tests-dummy.m */; };
+		7D244395BC4BD2F272B917E4EC035284 /* SpeechRecognizerButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B50F08DB738CBE9BC718B6FC3A3E5586 /* SpeechRecognizerButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EAAED32156164EF5C85DAEDE2A6C80E /* RecordButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7716A06428FD8CA620AF7BE3868D12DB /* RecordButton-dummy.m */; };
+		86C293EBC4C71D8584A5CC0AAD1E7CB1 /* SFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B9F2CF4D87EE63D7486101C3EE25B9 /* SFButton.swift */; };
+		93B8D44C64D637C2516749D8A1DD52C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		9668C5290C52AC4B9989AF75ED6E47AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		9D9DA99C90ABD46347E358A0D0FB9183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		9F0AC26B4F1A487AC4761CD0742B0DFE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		BB7CEC5F77D42E204DB04E0B05E1217D /* Pods-DVHacks3-DVHacks3UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8FBA0922E9C70D4983AEB0D83E4C9A /* Pods-DVHacks3-DVHacks3UITests-dummy.m */; };
+		C2A991AE99F4F287735B4EAFCB3E9C4F /* SFWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57335F09B0FC7F47FFAEB4AEE78EA8B8 /* SFWaveformView.swift */; };
+		C9526798B71C8836F7A938393C62D7BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		E7996D44DE80E219B2FE80BEFA2E5FA5 /* Pods-DVHacks3-DVHacks3UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E47BB105D9A63D4853B40C96775C322 /* Pods-DVHacks3-DVHacks3UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED7245B443D943FA61E1FE85A66A32E /* Pods-DVHacks3-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71844A51BC794DAB43572B7541B1ED90 /* Pods-DVHacks3-dummy.m */; };
+		F0EC0118BBC44B8A831F374C4B67A554 /* RecordButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A97D9CE150510919D8999CF0C7D77B5D /* RecordButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16502F8731F772C68C6E740DBF3ABA29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AC1021B94985C1DF670DE01ED11B5C7;
+			remoteInfo = RecordButton;
+		};
+		71A150AC3CDBAF914C84AFBA9DB84DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09B78C6BF855BE429C1A9CADA45B2AF6;
+			remoteInfo = SpeechRecognizerButton;
+		};
+		CB162FA4FE2D8BE224BE828581F254D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AC1021B94985C1DF670DE01ED11B5C7;
+			remoteInfo = RecordButton;
+		};
+		F2863327BD9CD3A15B29158A6084ABFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71D4CDB83C76D96BA3C606B4D595A7DD;
+			remoteInfo = "Pods-DVHacks3";
+		};
+		F4655F68197DD56E33CFBAF68CA48C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09B78C6BF855BE429C1A9CADA45B2AF6;
+			remoteInfo = SpeechRecognizerButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02B9F2CF4D87EE63D7486101C3EE25B9 /* SFButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SFButton.swift; path = SpeechRecognizerButton/SFButton.swift; sourceTree = "<group>"; };
+		083B1972389F79AF47F2A12FBA6782A2 /* Pods-DVHacks3-DVHacks3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVHacks3-DVHacks3UITests.release.xcconfig"; sourceTree = "<group>"; };
+		0C5F4ED4AADADC72E35967ACE54F3997 /* SpeechRecognizerButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpeechRecognizerButton-prefix.pch"; sourceTree = "<group>"; };
+		106E3ED6AF46A68A6C42C63697C2AC3D /* Pods-DVHacks3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVHacks3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		170FCE3D2D9E4EA98EA5098D4A10EA3B /* RecordButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RecordButton.framework; path = RecordButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2016420A448AD3832B006F6E8DB9E246 /* Pods_DVHacks3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DVHacks3.framework; path = "Pods-DVHacks3.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AC45475334FE80D048FB6F2D15C56CD /* Pods-DVHacks3Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DVHacks3Tests.modulemap"; sourceTree = "<group>"; };
+		2B8FBA0922E9C70D4983AEB0D83E4C9A /* Pods-DVHacks3-DVHacks3UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DVHacks3-DVHacks3UITests-dummy.m"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		325201C0B756837D103407E41568F62A /* Pods-DVHacks3Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DVHacks3Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		327223F7A7AEC66FAFD87FE80ABF443B /* Pods-DVHacks3.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DVHacks3.modulemap"; sourceTree = "<group>"; };
+		327F0F0D9F5375AAD2E63AE8FB3499B6 /* Pods-DVHacks3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVHacks3.debug.xcconfig"; sourceTree = "<group>"; };
+		3A5A54D0E5B5C808B34C1C24A7B69D4A /* SpeechRecognizerButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SpeechRecognizerButton.xcconfig; sourceTree = "<group>"; };
+		41B252233FB9F89AFDB840568257E9A9 /* RecordButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RecordButton.xcconfig; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		44F3EB074753BE7661B04942EE18D847 /* SpeechRecognizerButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SpeechRecognizerButton-Info.plist"; sourceTree = "<group>"; };
+		46F132A5473AE60DF332FEF1EB4ACC2F /* Pods-DVHacks3Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DVHacks3Tests-umbrella.h"; sourceTree = "<group>"; };
+		4E47BB105D9A63D4853B40C96775C322 /* Pods-DVHacks3-DVHacks3UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DVHacks3-DVHacks3UITests-umbrella.h"; sourceTree = "<group>"; };
+		4EAFD975D0ECE9C42BEFE126B2A3A4F3 /* RecordButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RecordButton.modulemap; sourceTree = "<group>"; };
+		4F62592551B654EBBEEFDA96AEBD186F /* Pods-DVHacks3-DVHacks3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVHacks3-DVHacks3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		548A9DA00D1D8A69EA544F14AF491752 /* Pods-DVHacks3-DVHacks3UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-DVHacks3-DVHacks3UITests.modulemap"; sourceTree = "<group>"; };
+		57335F09B0FC7F47FFAEB4AEE78EA8B8 /* SFWaveformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SFWaveformView.swift; path = SpeechRecognizerButton/SFWaveformView.swift; sourceTree = "<group>"; };
+		57C53D4AADA49AA6BAD0044CBF0E2AB2 /* RecordButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RecordButton-prefix.pch"; sourceTree = "<group>"; };
+		5ADA18CB69686C68991C4E2DD59CC7CD /* Pods-DVHacks3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVHacks3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5CA472E8530B2AC2EE911B5829F6C751 /* SpeechRecognizerButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SpeechRecognizerButton.framework; path = SpeechRecognizerButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6456565E320145222E8E320A24C84979 /* Pods-DVHacks3Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DVHacks3Tests-dummy.m"; sourceTree = "<group>"; };
+		6FF53005C7FB353712378217BC570C02 /* Pods-DVHacks3-DVHacks3UITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DVHacks3-DVHacks3UITests-Info.plist"; sourceTree = "<group>"; };
+		713D3C6669140A37FCD8E0B091578B66 /* Pods-DVHacks3-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DVHacks3-acknowledgements.plist"; sourceTree = "<group>"; };
+		71844A51BC794DAB43572B7541B1ED90 /* Pods-DVHacks3-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DVHacks3-dummy.m"; sourceTree = "<group>"; };
+		7716A06428FD8CA620AF7BE3868D12DB /* RecordButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RecordButton-dummy.m"; sourceTree = "<group>"; };
+		79AB6C46A20DC703AF0D2265669C7054 /* Pods-DVHacks3-DVHacks3UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DVHacks3-DVHacks3UITests-frameworks.sh"; sourceTree = "<group>"; };
+		8052F81F24E71081E40D20E6BA5EA6F9 /* Pods-DVHacks3Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DVHacks3Tests-Info.plist"; sourceTree = "<group>"; };
+		970F3ADD6ECB0E9078E1D477B618ED96 /* Pods-DVHacks3-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DVHacks3-Info.plist"; sourceTree = "<group>"; };
+		9B0AF690F35BBAA97E2095A08C77421B /* RecordButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecordButton.swift; path = Pod/Classes/RecordButton.swift; sourceTree = "<group>"; };
+		9BB864F88CD8BCA9633A51B663A69677 /* Pods_DVHacks3_DVHacks3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DVHacks3_DVHacks3UITests.framework; path = "Pods-DVHacks3-DVHacks3UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A97D9CE150510919D8999CF0C7D77B5D /* RecordButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RecordButton-umbrella.h"; sourceTree = "<group>"; };
+		B50F08DB738CBE9BC718B6FC3A3E5586 /* SpeechRecognizerButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpeechRecognizerButton-umbrella.h"; sourceTree = "<group>"; };
+		BB8843071E994772B0D5A37F5ACAFD0E /* SpeechRecognizerButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SpeechRecognizerButton.modulemap; sourceTree = "<group>"; };
+		C15472C29A084ED569E8B83B79BA4BBC /* RecordButton-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RecordButton-Info.plist"; sourceTree = "<group>"; };
+		C7171733F723EEAFE05B11504977C5C8 /* SpeechRecognizerButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SpeechRecognizerButton-dummy.m"; sourceTree = "<group>"; };
+		DDA6177B1B21E3A4FDD76DE9E2DB4C03 /* Pods-DVHacks3-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DVHacks3-umbrella.h"; sourceTree = "<group>"; };
+		E19F5659FD9852EF42936E6494946E68 /* Pods_DVHacks3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DVHacks3Tests.framework; path = "Pods-DVHacks3Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB0C469E8E1F61A0CB9819B989DD159 /* Pods-DVHacks3Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DVHacks3Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EE0A0F73BDED8877FED88F5E20145868 /* Pods-DVHacks3-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DVHacks3-frameworks.sh"; sourceTree = "<group>"; };
+		EFEE7AAE9911366004DFB8FF54A2961E /* SpeechRecognizerButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SpeechRecognizerButton.h; path = SpeechRecognizerButton/SpeechRecognizerButton.h; sourceTree = "<group>"; };
+		F00AE8B561A8BAF009FFFD2B45A4E3A1 /* Pods-DVHacks3-DVHacks3UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DVHacks3-DVHacks3UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F5CD3042AAEBCA5478582CBA54CAEE98 /* Pods-DVHacks3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVHacks3.release.xcconfig"; sourceTree = "<group>"; };
+		FAB2CD5A4096602A1A28CEBA20548C8D /* Pods-DVHacks3-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DVHacks3-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FBC2ABAA9DA89AF299270B4AF89FA77D /* Pods-DVHacks3-DVHacks3UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DVHacks3-DVHacks3UITests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F889327C9C07E82A210539B478F0797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9526798B71C8836F7A938393C62D7BE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35E00CD12C4A627F66A1B1EC4A3BD76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9DA99C90ABD46347E358A0D0FB9183 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44CD938CF0BFCB99117C60932742F8FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E3EBD64002D7F6F3D3ED9768053115C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67E4857B1C1838CE96FE645C09C66C50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9668C5290C52AC4B9989AF75ED6E47AC /* Foundation.framework in Frameworks */,
+				93B8D44C64D637C2516749D8A1DD52C0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1382615C393AABD652F7EF8EB949757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F0AC26B4F1A487AC4761CD0742B0DFE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0018E4E52C773C8351C88237E8489252 /* Pods-DVHacks3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2AC45475334FE80D048FB6F2D15C56CD /* Pods-DVHacks3Tests.modulemap */,
+				EAB0C469E8E1F61A0CB9819B989DD159 /* Pods-DVHacks3Tests-acknowledgements.markdown */,
+				325201C0B756837D103407E41568F62A /* Pods-DVHacks3Tests-acknowledgements.plist */,
+				6456565E320145222E8E320A24C84979 /* Pods-DVHacks3Tests-dummy.m */,
+				8052F81F24E71081E40D20E6BA5EA6F9 /* Pods-DVHacks3Tests-Info.plist */,
+				46F132A5473AE60DF332FEF1EB4ACC2F /* Pods-DVHacks3Tests-umbrella.h */,
+				106E3ED6AF46A68A6C42C63697C2AC3D /* Pods-DVHacks3Tests.debug.xcconfig */,
+				5ADA18CB69686C68991C4E2DD59CC7CD /* Pods-DVHacks3Tests.release.xcconfig */,
+			);
+			name = "Pods-DVHacks3Tests";
+			path = "Target Support Files/Pods-DVHacks3Tests";
+			sourceTree = "<group>";
+		};
+		0917194A7496E511A12F872F48D93CCB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				764A2D942134D877ED075E7FD4F12F75 /* Pods-DVHacks3 */,
+				90E3DB6E8BCE7906F2DB9906FCCAB463 /* Pods-DVHacks3-DVHacks3UITests */,
+				0018E4E52C773C8351C88237E8489252 /* Pods-DVHacks3Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		228EB65E66DCC4F7A4488CC1CE342EE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2016420A448AD3832B006F6E8DB9E246 /* Pods_DVHacks3.framework */,
+				9BB864F88CD8BCA9633A51B663A69677 /* Pods_DVHacks3_DVHacks3UITests.framework */,
+				E19F5659FD9852EF42936E6494946E68 /* Pods_DVHacks3Tests.framework */,
+				170FCE3D2D9E4EA98EA5098D4A10EA3B /* RecordButton.framework */,
+				5CA472E8530B2AC2EE911B5829F6C751 /* SpeechRecognizerButton.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2316964943D27BCC4ECDC734096AA53C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1C9B6A7B7BD5E2458A59EF6EFA812 /* RecordButton */,
+				7C98A374B4E1BBB1FE64CF878D40C5B8 /* SpeechRecognizerButton */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		764A2D942134D877ED075E7FD4F12F75 /* Pods-DVHacks3 */ = {
+			isa = PBXGroup;
+			children = (
+				327223F7A7AEC66FAFD87FE80ABF443B /* Pods-DVHacks3.modulemap */,
+				FAB2CD5A4096602A1A28CEBA20548C8D /* Pods-DVHacks3-acknowledgements.markdown */,
+				713D3C6669140A37FCD8E0B091578B66 /* Pods-DVHacks3-acknowledgements.plist */,
+				71844A51BC794DAB43572B7541B1ED90 /* Pods-DVHacks3-dummy.m */,
+				EE0A0F73BDED8877FED88F5E20145868 /* Pods-DVHacks3-frameworks.sh */,
+				970F3ADD6ECB0E9078E1D477B618ED96 /* Pods-DVHacks3-Info.plist */,
+				DDA6177B1B21E3A4FDD76DE9E2DB4C03 /* Pods-DVHacks3-umbrella.h */,
+				327F0F0D9F5375AAD2E63AE8FB3499B6 /* Pods-DVHacks3.debug.xcconfig */,
+				F5CD3042AAEBCA5478582CBA54CAEE98 /* Pods-DVHacks3.release.xcconfig */,
+			);
+			name = "Pods-DVHacks3";
+			path = "Target Support Files/Pods-DVHacks3";
+			sourceTree = "<group>";
+		};
+		7C98A374B4E1BBB1FE64CF878D40C5B8 /* SpeechRecognizerButton */ = {
+			isa = PBXGroup;
+			children = (
+				02B9F2CF4D87EE63D7486101C3EE25B9 /* SFButton.swift */,
+				57335F09B0FC7F47FFAEB4AEE78EA8B8 /* SFWaveformView.swift */,
+				EFEE7AAE9911366004DFB8FF54A2961E /* SpeechRecognizerButton.h */,
+				86BCC08347A2212EBE87B907F7479142 /* Support Files */,
+			);
+			name = SpeechRecognizerButton;
+			path = SpeechRecognizerButton;
+			sourceTree = "<group>";
+		};
+		86BCC08347A2212EBE87B907F7479142 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB8843071E994772B0D5A37F5ACAFD0E /* SpeechRecognizerButton.modulemap */,
+				3A5A54D0E5B5C808B34C1C24A7B69D4A /* SpeechRecognizerButton.xcconfig */,
+				C7171733F723EEAFE05B11504977C5C8 /* SpeechRecognizerButton-dummy.m */,
+				44F3EB074753BE7661B04942EE18D847 /* SpeechRecognizerButton-Info.plist */,
+				0C5F4ED4AADADC72E35967ACE54F3997 /* SpeechRecognizerButton-prefix.pch */,
+				B50F08DB738CBE9BC718B6FC3A3E5586 /* SpeechRecognizerButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SpeechRecognizerButton";
+			sourceTree = "<group>";
+		};
+		90E3DB6E8BCE7906F2DB9906FCCAB463 /* Pods-DVHacks3-DVHacks3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				548A9DA00D1D8A69EA544F14AF491752 /* Pods-DVHacks3-DVHacks3UITests.modulemap */,
+				F00AE8B561A8BAF009FFFD2B45A4E3A1 /* Pods-DVHacks3-DVHacks3UITests-acknowledgements.markdown */,
+				FBC2ABAA9DA89AF299270B4AF89FA77D /* Pods-DVHacks3-DVHacks3UITests-acknowledgements.plist */,
+				2B8FBA0922E9C70D4983AEB0D83E4C9A /* Pods-DVHacks3-DVHacks3UITests-dummy.m */,
+				79AB6C46A20DC703AF0D2265669C7054 /* Pods-DVHacks3-DVHacks3UITests-frameworks.sh */,
+				6FF53005C7FB353712378217BC570C02 /* Pods-DVHacks3-DVHacks3UITests-Info.plist */,
+				4E47BB105D9A63D4853B40C96775C322 /* Pods-DVHacks3-DVHacks3UITests-umbrella.h */,
+				4F62592551B654EBBEEFDA96AEBD186F /* Pods-DVHacks3-DVHacks3UITests.debug.xcconfig */,
+				083B1972389F79AF47F2A12FBA6782A2 /* Pods-DVHacks3-DVHacks3UITests.release.xcconfig */,
+			);
+			name = "Pods-DVHacks3-DVHacks3UITests";
+			path = "Target Support Files/Pods-DVHacks3-DVHacks3UITests";
+			sourceTree = "<group>";
+		};
+		AFD1C9B6A7B7BD5E2458A59EF6EFA812 /* RecordButton */ = {
+			isa = PBXGroup;
+			children = (
+				9B0AF690F35BBAA97E2095A08C77421B /* RecordButton.swift */,
+				E25DCA317413F67D5427D406D18F8330 /* Support Files */,
+			);
+			name = RecordButton;
+			path = RecordButton;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				2316964943D27BCC4ECDC734096AA53C /* Pods */,
+				228EB65E66DCC4F7A4488CC1CE342EE7 /* Products */,
+				0917194A7496E511A12F872F48D93CCB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E25DCA317413F67D5427D406D18F8330 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EAFD975D0ECE9C42BEFE126B2A3A4F3 /* RecordButton.modulemap */,
+				41B252233FB9F89AFDB840568257E9A9 /* RecordButton.xcconfig */,
+				7716A06428FD8CA620AF7BE3868D12DB /* RecordButton-dummy.m */,
+				C15472C29A084ED569E8B83B79BA4BBC /* RecordButton-Info.plist */,
+				57C53D4AADA49AA6BAD0044CBF0E2AB2 /* RecordButton-prefix.pch */,
+				A97D9CE150510919D8999CF0C7D77B5D /* RecordButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RecordButton";
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4FB62EB58985F26C824B2E89DE3D1475 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D244395BC4BD2F272B917E4EC035284 /* SpeechRecognizerButton-umbrella.h in Headers */,
+				35A1D124D045D7311DE2D4DCDF24E9EF /* SpeechRecognizerButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		954359053206B2910A284F7C8C8B47D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				538F78855E27BD13B6272562F2D80A15 /* Pods-DVHacks3-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE4E085ABB54B61DDD04AD577A52FEAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				406A8C48ABC0222B16AEC8129817DCB5 /* Pods-DVHacks3Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C001B27E1C63D5A7336EF0EE5D779DCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7996D44DE80E219B2FE80BEFA2E5FA5 /* Pods-DVHacks3-DVHacks3UITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE0BB3D91E67D8333C5E24B3BEE5C8C1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0EC0118BBC44B8A831F374C4B67A554 /* RecordButton-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09B78C6BF855BE429C1A9CADA45B2AF6 /* SpeechRecognizerButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E3036EE65D1A960746CD201E2AE897F /* Build configuration list for PBXNativeTarget "SpeechRecognizerButton" */;
+			buildPhases = (
+				4FB62EB58985F26C824B2E89DE3D1475 /* Headers */,
+				D493358B973CB8A25E6F82B897D992B6 /* Sources */,
+				35E00CD12C4A627F66A1B1EC4A3BD76B /* Frameworks */,
+				0DAE9BB826F7ABEFF33737DD565350E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpeechRecognizerButton;
+			productName = SpeechRecognizerButton;
+			productReference = 5CA472E8530B2AC2EE911B5829F6C751 /* SpeechRecognizerButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3AC1021B94985C1DF670DE01ED11B5C7 /* RecordButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C1DBB5B735FFF661077AF29FA7F735D /* Build configuration list for PBXNativeTarget "RecordButton" */;
+			buildPhases = (
+				DE0BB3D91E67D8333C5E24B3BEE5C8C1 /* Headers */,
+				DBA69309D977550A832E40D3E01D2A30 /* Sources */,
+				67E4857B1C1838CE96FE645C09C66C50 /* Frameworks */,
+				CD4FCDC8DA7918DA0E115891F24FBE76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecordButton;
+			productName = RecordButton;
+			productReference = 170FCE3D2D9E4EA98EA5098D4A10EA3B /* RecordButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6556F35D22814FD8F8D5502639500761 /* Pods-DVHacks3-DVHacks3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9ADD4CEE5C49F5615AD0057DAE8A3DF /* Build configuration list for PBXNativeTarget "Pods-DVHacks3-DVHacks3UITests" */;
+			buildPhases = (
+				C001B27E1C63D5A7336EF0EE5D779DCB /* Headers */,
+				D65604D993CB5578F4145DE64E562569 /* Sources */,
+				1F889327C9C07E82A210539B478F0797 /* Frameworks */,
+				D4F08E075B54B63F533F31D5304F4DA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC5132492D205BF670EBADC150602362 /* PBXTargetDependency */,
+				8F4607F2AB3C04BD6F4C6FDF12DD4ABC /* PBXTargetDependency */,
+			);
+			name = "Pods-DVHacks3-DVHacks3UITests";
+			productName = "Pods-DVHacks3-DVHacks3UITests";
+			productReference = 9BB864F88CD8BCA9633A51B663A69677 /* Pods_DVHacks3_DVHacks3UITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6D0A131682E6EF8D61341138DDBF2F23 /* Pods-DVHacks3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6D7EF21E5171182E6DA0AD0C957F660 /* Build configuration list for PBXNativeTarget "Pods-DVHacks3Tests" */;
+			buildPhases = (
+				AE4E085ABB54B61DDD04AD577A52FEAB /* Headers */,
+				2B6EC7E19B84ADCCA22F09DA20AA5B8B /* Sources */,
+				44CD938CF0BFCB99117C60932742F8FE /* Frameworks */,
+				CC9AD241FFF1DE02FA13E5F0D2CE2244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C347685C55F692E4CC34BA369BF66BD3 /* PBXTargetDependency */,
+			);
+			name = "Pods-DVHacks3Tests";
+			productName = "Pods-DVHacks3Tests";
+			productReference = E19F5659FD9852EF42936E6494946E68 /* Pods_DVHacks3Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		71D4CDB83C76D96BA3C606B4D595A7DD /* Pods-DVHacks3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B0AB0DBDC12D7AF5B7BCB0608BD76DB /* Build configuration list for PBXNativeTarget "Pods-DVHacks3" */;
+			buildPhases = (
+				954359053206B2910A284F7C8C8B47D9 /* Headers */,
+				963BD8473E24095407CEB9E4B75645B1 /* Sources */,
+				C1382615C393AABD652F7EF8EB949757 /* Frameworks */,
+				011B1EABEEBAE4FCCF3C3CB759BC09D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				964E66975EC5C7F8D6D561367AA65F2F /* PBXTargetDependency */,
+				DA93D92A2FA7D5E07449E1BE6996B186 /* PBXTargetDependency */,
+			);
+			name = "Pods-DVHacks3";
+			productName = "Pods-DVHacks3";
+			productReference = 2016420A448AD3832B006F6E8DB9E246 /* Pods_DVHacks3.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 228EB65E66DCC4F7A4488CC1CE342EE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71D4CDB83C76D96BA3C606B4D595A7DD /* Pods-DVHacks3 */,
+				6556F35D22814FD8F8D5502639500761 /* Pods-DVHacks3-DVHacks3UITests */,
+				6D0A131682E6EF8D61341138DDBF2F23 /* Pods-DVHacks3Tests */,
+				3AC1021B94985C1DF670DE01ED11B5C7 /* RecordButton */,
+				09B78C6BF855BE429C1A9CADA45B2AF6 /* SpeechRecognizerButton */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		011B1EABEEBAE4FCCF3C3CB759BC09D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DAE9BB826F7ABEFF33737DD565350E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9AD241FFF1DE02FA13E5F0D2CE2244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD4FCDC8DA7918DA0E115891F24FBE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F08E075B54B63F533F31D5304F4DA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B6EC7E19B84ADCCA22F09DA20AA5B8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61CC479DCC970D109401342E57CA56B5 /* Pods-DVHacks3Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		963BD8473E24095407CEB9E4B75645B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED7245B443D943FA61E1FE85A66A32E /* Pods-DVHacks3-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D493358B973CB8A25E6F82B897D992B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86C293EBC4C71D8584A5CC0AAD1E7CB1 /* SFButton.swift in Sources */,
+				C2A991AE99F4F287735B4EAFCB3E9C4F /* SFWaveformView.swift in Sources */,
+				360F5072628254B37EDB29E4C9E1D185 /* SpeechRecognizerButton-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D65604D993CB5578F4145DE64E562569 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7CEC5F77D42E204DB04E0B05E1217D /* Pods-DVHacks3-DVHacks3UITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBA69309D977550A832E40D3E01D2A30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAAED32156164EF5C85DAEDE2A6C80E /* RecordButton-dummy.m in Sources */,
+				34DF34C02407D627DBDF518330CB7011 /* RecordButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F4607F2AB3C04BD6F4C6FDF12DD4ABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpeechRecognizerButton;
+			target = 09B78C6BF855BE429C1A9CADA45B2AF6 /* SpeechRecognizerButton */;
+			targetProxy = 71A150AC3CDBAF914C84AFBA9DB84DAC /* PBXContainerItemProxy */;
+		};
+		964E66975EC5C7F8D6D561367AA65F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RecordButton;
+			target = 3AC1021B94985C1DF670DE01ED11B5C7 /* RecordButton */;
+			targetProxy = CB162FA4FE2D8BE224BE828581F254D0 /* PBXContainerItemProxy */;
+		};
+		C347685C55F692E4CC34BA369BF66BD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-DVHacks3";
+			target = 71D4CDB83C76D96BA3C606B4D595A7DD /* Pods-DVHacks3 */;
+			targetProxy = F2863327BD9CD3A15B29158A6084ABFE /* PBXContainerItemProxy */;
+		};
+		CC5132492D205BF670EBADC150602362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RecordButton;
+			target = 3AC1021B94985C1DF670DE01ED11B5C7 /* RecordButton */;
+			targetProxy = 16502F8731F772C68C6E740DBF3ABA29 /* PBXContainerItemProxy */;
+		};
+		DA93D92A2FA7D5E07449E1BE6996B186 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SpeechRecognizerButton;
+			target = 09B78C6BF855BE429C1A9CADA45B2AF6 /* SpeechRecognizerButton */;
+			targetProxy = F4655F68197DD56E33CFBAF68CA48C84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		070515A39D8F27050C96DDECA3C78088 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5A54D0E5B5C808B34C1C24A7B69D4A /* SpeechRecognizerButton.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpeechRecognizerButton/SpeechRecognizerButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpeechRecognizerButton/SpeechRecognizerButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpeechRecognizerButton/SpeechRecognizerButton.modulemap";
+				PRODUCT_MODULE_NAME = SpeechRecognizerButton;
+				PRODUCT_NAME = SpeechRecognizerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		123E441EAA25CC5D1FFE6FDDFE1ADA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F62592551B654EBBEEFDA96AEBD186F /* Pods-DVHacks3-DVHacks3UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		307E594015FA0CA6B304346A757882A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ADA18CB69686C68991C4E2DD59CC7CD /* Pods-DVHacks3Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DVHacks3Tests/Pods-DVHacks3Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DVHacks3Tests/Pods-DVHacks3Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		504F945217E6D983011871FB010B2C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41B252233FB9F89AFDB840568257E9A9 /* RecordButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RecordButton/RecordButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RecordButton/RecordButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RecordButton/RecordButton.modulemap";
+				PRODUCT_MODULE_NAME = RecordButton;
+				PRODUCT_NAME = RecordButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5A9033E152D3096E7672C25C01BA5940 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5CD3042AAEBCA5478582CBA54CAEE98 /* Pods-DVHacks3.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DVHacks3/Pods-DVHacks3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DVHacks3/Pods-DVHacks3.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		871B6E28ABA34DAE69824AB9D22D3B7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8B97E47A0F7A2AE8A799320384F43579 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41B252233FB9F89AFDB840568257E9A9 /* RecordButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RecordButton/RecordButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RecordButton/RecordButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RecordButton/RecordButton.modulemap";
+				PRODUCT_MODULE_NAME = RecordButton;
+				PRODUCT_NAME = RecordButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A921CE8294D0511CDD6114959F91BA12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5A54D0E5B5C808B34C1C24A7B69D4A /* SpeechRecognizerButton.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SpeechRecognizerButton/SpeechRecognizerButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SpeechRecognizerButton/SpeechRecognizerButton-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SpeechRecognizerButton/SpeechRecognizerButton.modulemap";
+				PRODUCT_MODULE_NAME = SpeechRecognizerButton;
+				PRODUCT_NAME = SpeechRecognizerButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E5FB5DAF90AAE62A2D31AD106B7BDA01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106E3ED6AF46A68A6C42C63697C2AC3D /* Pods-DVHacks3Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DVHacks3Tests/Pods-DVHacks3Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DVHacks3Tests/Pods-DVHacks3Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EBE95959F51C61C3AE48EBA8F0AA4DCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 083B1972389F79AF47F2A12FBA6782A2 /* Pods-DVHacks3-DVHacks3UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F24B02E80F7CD8A6EC691939D0C4CA24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 327F0F0D9F5375AAD2E63AE8FB3499B6 /* Pods-DVHacks3.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-DVHacks3/Pods-DVHacks3-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DVHacks3/Pods-DVHacks3.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B0AB0DBDC12D7AF5B7BCB0608BD76DB /* Build configuration list for PBXNativeTarget "Pods-DVHacks3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24B02E80F7CD8A6EC691939D0C4CA24 /* Debug */,
+				5A9033E152D3096E7672C25C01BA5940 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C1DBB5B735FFF661077AF29FA7F735D /* Build configuration list for PBXNativeTarget "RecordButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B97E47A0F7A2AE8A799320384F43579 /* Debug */,
+				504F945217E6D983011871FB010B2C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E3036EE65D1A960746CD201E2AE897F /* Build configuration list for PBXNativeTarget "SpeechRecognizerButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A921CE8294D0511CDD6114959F91BA12 /* Debug */,
+				070515A39D8F27050C96DDECA3C78088 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13967C5C8F4B10B3EE4D6C208A0A7BEB /* Debug */,
+				871B6E28ABA34DAE69824AB9D22D3B7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6D7EF21E5171182E6DA0AD0C957F660 /* Build configuration list for PBXNativeTarget "Pods-DVHacks3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5FB5DAF90AAE62A2D31AD106B7BDA01 /* Debug */,
+				307E594015FA0CA6B304346A757882A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9ADD4CEE5C49F5615AD0057DAE8A3DF /* Build configuration list for PBXNativeTarget "Pods-DVHacks3-DVHacks3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				123E441EAA25CC5D1FFE6FDDFE1ADA67 /* Debug */,
+				EBE95959F51C61C3AE48EBA8F0AA4DCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

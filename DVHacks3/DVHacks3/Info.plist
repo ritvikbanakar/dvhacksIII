@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GT-Walsheim-Pro-Trial-Medium.otf</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>We need to recognize your speech</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>We need your microphone</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We need camera access to see your pupil size</string>
 	<key>CFBundleDevelopmentRegion</key>

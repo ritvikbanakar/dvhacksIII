@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17F990ADC4BF243299F7D5C4 /* Pods_DVHacks3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4D36B4BAF1331B7B453BFC /* Pods_DVHacks3Tests.framework */; };
 		1F01032926067F9000BB3CDC /* TimeTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01032826067F9000BB3CDC /* TimeTestVC.swift */; };
 		1F0103362606A3AD00BB3CDC /* DilationTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0103352606A3AD00BB3CDC /* DilationTestVC.swift */; };
 		1F717C2C2606C3EF00CAD5EA /* EyeClassifer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C2B2606C3EE00CAD5EA /* EyeClassifer.mlmodel */; };
+		1F717C392606CCD500CAD5EA /* SpinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C382606CCD500CAD5EA /* SpinVC.swift */; };
+		1F717C402606CD1500CAD5EA /* RemoteTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C3D2606CD1500CAD5EA /* RemoteTransformation.swift */; };
+		1F717C412606CD1500CAD5EA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C3E2606CD1500CAD5EA /* Entry.swift */; };
+		1F717C422606CD1500CAD5EA /* EchoAR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C3F2606CD1500CAD5EA /* EchoAR.swift */; };
+		1F717C472606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F717C462606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf */; };
 		1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3726058A900015FB53 /* AppDelegate.swift */; };
 		1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3926058A900015FB53 /* SceneDelegate.swift */; };
 		1F962F3C26058A900015FB53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3B26058A900015FB53 /* ViewController.swift */; };
@@ -18,6 +24,8 @@
 		1F962F4426058A910015FB53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F962F4226058A910015FB53 /* LaunchScreen.storyboard */; };
 		1F962F4F26058A910015FB53 /* DVHacks3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F4E26058A910015FB53 /* DVHacks3Tests.swift */; };
 		1F962F5A26058A910015FB53 /* DVHacks3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F5926058A910015FB53 /* DVHacks3UITests.swift */; };
+		73C2E7699D23FEE159D4B56D /* Pods_DVHacks3_DVHacks3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE8843F9A96548E00B39893 /* Pods_DVHacks3_DVHacks3UITests.framework */; };
+		7462F38284A0CBB581385C00 /* Pods_DVHacks3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ED48F47C9E115ABE26A290 /* Pods_DVHacks3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,11 @@
 		1F01032826067F9000BB3CDC /* TimeTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTestVC.swift; sourceTree = "<group>"; };
 		1F0103352606A3AD00BB3CDC /* DilationTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DilationTestVC.swift; sourceTree = "<group>"; };
 		1F717C2B2606C3EE00CAD5EA /* EyeClassifer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = EyeClassifer.mlmodel; path = EyeClassifer.mlproj/Models/EyeClassifer.mlmodel; sourceTree = SOURCE_ROOT; };
+		1F717C382606CCD500CAD5EA /* SpinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinVC.swift; sourceTree = "<group>"; };
+		1F717C3D2606CD1500CAD5EA /* RemoteTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteTransformation.swift; sourceTree = "<group>"; };
+		1F717C3E2606CD1500CAD5EA /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		1F717C3F2606CD1500CAD5EA /* EchoAR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EchoAR.swift; sourceTree = "<group>"; };
+		1F717C462606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Medium.otf"; sourceTree = "<group>"; };
 		1F962F3426058A900015FB53 /* DVHacks3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVHacks3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F962F3726058A900015FB53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F962F3926058A900015FB53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +68,15 @@
 		1F962F5526058A910015FB53 /* DVHacks3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DVHacks3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F962F5926058A910015FB53 /* DVHacks3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVHacks3UITests.swift; sourceTree = "<group>"; };
 		1F962F5B26058A910015FB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0491A3A4AE76CD98B355C2 /* Pods-DVHacks3-DVHacks3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVHacks3-DVHacks3UITests.release.xcconfig"; path = "Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests.release.xcconfig"; sourceTree = "<group>"; };
+		44ED48F47C9E115ABE26A290 /* Pods_DVHacks3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVHacks3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E8C583B364A2BD9238FEAD /* Pods-DVHacks3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVHacks3.debug.xcconfig"; path = "Target Support Files/Pods-DVHacks3/Pods-DVHacks3.debug.xcconfig"; sourceTree = "<group>"; };
+		730F63495B8C2B2F6933C502 /* Pods-DVHacks3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVHacks3Tests.debug.xcconfig"; path = "Target Support Files/Pods-DVHacks3Tests/Pods-DVHacks3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		7EE8843F9A96548E00B39893 /* Pods_DVHacks3_DVHacks3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVHacks3_DVHacks3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0DAA31D8184F4B0E51C1CD /* Pods-DVHacks3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVHacks3Tests.release.xcconfig"; path = "Target Support Files/Pods-DVHacks3Tests/Pods-DVHacks3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D6AC737F0DC371D126F21F7E /* Pods-DVHacks3-DVHacks3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVHacks3-DVHacks3UITests.debug.xcconfig"; path = "Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E2491DF3E5D47DED5AFA80DE /* Pods-DVHacks3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVHacks3.release.xcconfig"; path = "Target Support Files/Pods-DVHacks3/Pods-DVHacks3.release.xcconfig"; sourceTree = "<group>"; };
+		FA4D36B4BAF1331B7B453BFC /* Pods_DVHacks3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVHacks3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7462F38284A0CBB581385C00 /* Pods_DVHacks3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F990ADC4BF243299F7D5C4 /* Pods_DVHacks3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +100,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C2E7699D23FEE159D4B56D /* Pods_DVHacks3_DVHacks3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DF74B0E56D451450A42AF5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45E8C583B364A2BD9238FEAD /* Pods-DVHacks3.debug.xcconfig */,
+				E2491DF3E5D47DED5AFA80DE /* Pods-DVHacks3.release.xcconfig */,
+				D6AC737F0DC371D126F21F7E /* Pods-DVHacks3-DVHacks3UITests.debug.xcconfig */,
+				2C0491A3A4AE76CD98B355C2 /* Pods-DVHacks3-DVHacks3UITests.release.xcconfig */,
+				730F63495B8C2B2F6933C502 /* Pods-DVHacks3Tests.debug.xcconfig */,
+				CE0DAA31D8184F4B0E51C1CD /* Pods-DVHacks3Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		1F962F2B26058A900015FB53 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +128,8 @@
 				1F962F4D26058A910015FB53 /* DVHacks3Tests */,
 				1F962F5826058A910015FB53 /* DVHacks3UITests */,
 				1F962F3526058A900015FB53 /* Products */,
+				0DF74B0E56D451450A42AF5E /* Pods */,
+				D209591EABCFC30BC8F7A1EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,10 +152,15 @@
 				1F962F3D26058A900015FB53 /* Main.storyboard */,
 				1F0103352606A3AD00BB3CDC /* DilationTestVC.swift */,
 				1F962F4026058A910015FB53 /* Assets.xcassets */,
+				1F717C3F2606CD1500CAD5EA /* EchoAR.swift */,
+				1F717C3E2606CD1500CAD5EA /* Entry.swift */,
+				1F717C3D2606CD1500CAD5EA /* RemoteTransformation.swift */,
 				1F962F4226058A910015FB53 /* LaunchScreen.storyboard */,
 				1F717C2B2606C3EE00CAD5EA /* EyeClassifer.mlmodel */,
 				1F962F4526058A910015FB53 /* Info.plist */,
 				1F01032826067F9000BB3CDC /* TimeTestVC.swift */,
+				1F717C382606CCD500CAD5EA /* SpinVC.swift */,
+				1F717C462606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf */,
 			);
 			path = DVHacks3;
 			sourceTree = "<group>";
@@ -137,6 +183,16 @@
 			path = DVHacks3UITests;
 			sourceTree = "<group>";
 		};
+		D209591EABCFC30BC8F7A1EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44ED48F47C9E115ABE26A290 /* Pods_DVHacks3.framework */,
+				7EE8843F9A96548E00B39893 /* Pods_DVHacks3_DVHacks3UITests.framework */,
+				FA4D36B4BAF1331B7B453BFC /* Pods_DVHacks3Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F962F5E26058A910015FB53 /* Build configuration list for PBXNativeTarget "DVHacks3" */;
 			buildPhases = (
+				BA47091E47F7DB29C2661135 /* [CP] Check Pods Manifest.lock */,
 				1F962F3026058A900015FB53 /* Sources */,
 				1F962F3126058A900015FB53 /* Frameworks */,
 				1F962F3226058A900015FB53 /* Resources */,
+				C3168D6DD70EA0177218CF33 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F962F6126058A910015FB53 /* Build configuration list for PBXNativeTarget "DVHacks3Tests" */;
 			buildPhases = (
+				7B6732549F52044B6F581B77 /* [CP] Check Pods Manifest.lock */,
 				1F962F4626058A910015FB53 /* Sources */,
 				1F962F4726058A910015FB53 /* Frameworks */,
 				1F962F4826058A910015FB53 /* Resources */,
@@ -179,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F962F6426058A910015FB53 /* Build configuration list for PBXNativeTarget "DVHacks3UITests" */;
 			buildPhases = (
+				8441444CF9C07547F91C5D95 /* [CP] Check Pods Manifest.lock */,
 				1F962F5126058A910015FB53 /* Sources */,
 				1F962F5226058A910015FB53 /* Frameworks */,
 				1F962F5326058A910015FB53 /* Resources */,
+				ED663DD74A2F24920637B481 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F717C472606CD8500CAD5EA /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */,
 				1F962F4426058A910015FB53 /* LaunchScreen.storyboard in Resources */,
 				1F962F4126058A910015FB53 /* Assets.xcassets in Resources */,
 				1F962F3F26058A900015FB53 /* Main.storyboard in Resources */,
@@ -262,17 +324,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B6732549F52044B6F581B77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVHacks3Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8441444CF9C07547F91C5D95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVHacks3-DVHacks3UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA47091E47F7DB29C2661135 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DVHacks3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3168D6DD70EA0177218CF33 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DVHacks3/Pods-DVHacks3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DVHacks3/Pods-DVHacks3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DVHacks3/Pods-DVHacks3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED663DD74A2F24920637B481 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DVHacks3-DVHacks3UITests/Pods-DVHacks3-DVHacks3UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F962F3026058A900015FB53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F717C402606CD1500CAD5EA /* RemoteTransformation.swift in Sources */,
 				1F962F3C26058A900015FB53 /* ViewController.swift in Sources */,
 				1F717C2C2606C3EF00CAD5EA /* EyeClassifer.mlmodel in Sources */,
 				1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */,
 				1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */,
 				1F01032926067F9000BB3CDC /* TimeTestVC.swift in Sources */,
+				1F717C412606CD1500CAD5EA /* Entry.swift in Sources */,
 				1F0103362606A3AD00BB3CDC /* DilationTestVC.swift in Sources */,
+				1F717C392606CCD500CAD5EA /* SpinVC.swift in Sources */,
+				1F717C422606CD1500CAD5EA /* EchoAR.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +614,7 @@
 		};
 		1F962F5F26058A910015FB53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E8C583B364A2BD9238FEAD /* Pods-DVHacks3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,6 +635,7 @@
 		};
 		1F962F6026058A910015FB53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2491DF3E5D47DED5AFA80DE /* Pods-DVHacks3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -485,6 +656,7 @@
 		};
 		1F962F6226058A910015FB53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 730F63495B8C2B2F6933C502 /* Pods-DVHacks3Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +679,7 @@
 		};
 		1F962F6326058A910015FB53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0DAA31D8184F4B0E51C1CD /* Pods-DVHacks3Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,6 +702,7 @@
 		};
 		1F962F6526058A910015FB53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AC737F0DC371D126F21F7E /* Pods-DVHacks3-DVHacks3UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -549,6 +723,7 @@
 		};
 		1F962F6626058A910015FB53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C0491A3A4AE76CD98B355C2 /* Pods-DVHacks3-DVHacks3UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

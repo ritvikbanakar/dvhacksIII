@@ -19,7 +19,7 @@ struct defaultsKeys {
     static let time_trial_3 = "TT3"
 }
 
-class ViewController: UIViewController, TimeTestResultDelegate {
+class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult {
     
     let defaults = UserDefaults.standard
     
@@ -237,18 +237,45 @@ class ViewController: UIViewController, TimeTestResultDelegate {
             self.present(newvc, animated: true, completion: nil)
         
         } else if(!test2Complete){
-            //Go to test2
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newvc = storyboard.instantiateViewController(identifier: "spintest") as! SpinVC
+            newvc.modalPresentationStyle = .overFullScreen
+            newvc.spinResult = self
+            self.present(newvc, animated: true, completion: nil)
         } else if(!test3Complete){
             //Go to test3
         }
     }
     
-    func didPassTest(isDrunk: Bool) {
+    func didPassTest(isDrunk: Bool, testNumber: Int) {
         if(isDrunk){
-            test1Result.backgroundColor = UIColor(named: "Fail Color")
+            switch testNumber {
+            case 1:
+                test1Result.backgroundColor = UIColor(named: "Fail Color")
+                test1Complete = true
+            case 2:
+                test2Result.backgroundColor = UIColor(named: "Fail Color")
+                test2Complete = true
+            case 3:
+                test3Result.backgroundColor = UIColor(named: "Fail Color")
+                test3Complete = true
+            default:
+                print("something went wrong")
+            }
         } else {
-            test1Result.backgroundColor = UIColor(named: "Pass Color")
-        }
+            switch testNumber {
+            case 1:
+                test1Result.backgroundColor = UIColor(named: "Pass Color")
+                test1Complete = true
+            case 2:
+                test2Result.backgroundColor = UIColor(named: "Pass Color")
+                test2Complete = true
+            case 3:
+                test3Result.backgroundColor = UIColor(named: "Pass Color")
+                test3Complete = true
+            default:
+                print("something went wrong")
+            }        }
         test1Complete = true
     }
     
