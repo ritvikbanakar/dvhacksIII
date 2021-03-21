@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F01032926067F9000BB3CDC /* TimeTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01032826067F9000BB3CDC /* TimeTestVC.swift */; };
 		1F0103362606A3AD00BB3CDC /* DilationTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0103352606A3AD00BB3CDC /* DilationTestVC.swift */; };
+		1F717C2C2606C3EF00CAD5EA /* EyeClassifer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F717C2B2606C3EE00CAD5EA /* EyeClassifer.mlmodel */; };
 		1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3726058A900015FB53 /* AppDelegate.swift */; };
 		1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3926058A900015FB53 /* SceneDelegate.swift */; };
 		1F962F3C26058A900015FB53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F962F3B26058A900015FB53 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		1F01032826067F9000BB3CDC /* TimeTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTestVC.swift; sourceTree = "<group>"; };
 		1F0103352606A3AD00BB3CDC /* DilationTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DilationTestVC.swift; sourceTree = "<group>"; };
+		1F717C2B2606C3EE00CAD5EA /* EyeClassifer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = EyeClassifer.mlmodel; path = EyeClassifer.mlproj/Models/EyeClassifer.mlmodel; sourceTree = SOURCE_ROOT; };
 		1F962F3426058A900015FB53 /* DVHacks3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVHacks3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F962F3726058A900015FB53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F962F3926058A900015FB53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				1F0103352606A3AD00BB3CDC /* DilationTestVC.swift */,
 				1F962F4026058A910015FB53 /* Assets.xcassets */,
 				1F962F4226058A910015FB53 /* LaunchScreen.storyboard */,
+				1F717C2B2606C3EE00CAD5EA /* EyeClassifer.mlmodel */,
 				1F962F4526058A910015FB53 /* Info.plist */,
 				1F01032826067F9000BB3CDC /* TimeTestVC.swift */,
 			);
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F962F3C26058A900015FB53 /* ViewController.swift in Sources */,
+				1F717C2C2606C3EF00CAD5EA /* EyeClassifer.mlmodel in Sources */,
 				1F962F3826058A900015FB53 /* AppDelegate.swift in Sources */,
 				1F962F3A26058A900015FB53 /* SceneDelegate.swift in Sources */,
 				1F01032926067F9000BB3CDC /* TimeTestVC.swift in Sources */,
