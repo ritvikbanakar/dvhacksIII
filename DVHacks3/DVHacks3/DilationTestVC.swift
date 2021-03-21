@@ -10,11 +10,17 @@ import AVKit
 import Vision
 import CoreML
 
+protocol DilationTestResult{
+    func didPassTest(isDrunk: Bool, testNumber: Int)
+}
+
 class DilationTestVC: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet weak var newImage: UIImageView!
-    
     @IBOutlet weak var secondView: UIView!
+    let defaults = UserDefaults.standard
+
+    var dilationResult: DilationTestResult!
     var model = EyeClassifer()
 
 
@@ -49,10 +55,30 @@ class DilationTestVC: UIViewController, UIImagePickerControllerDelegate & UINavi
         let dilation_data = try? model.prediction(image: (editedImage?.pixelBuffer())!)
         
         let result = dilation_data!.classLabel
-                
-//                model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
-//            fatalError("Unexpected runtime error.")
-//        }
+        
+        let dilated_result = defaults.double(forKey: defaultsKeys.dilated_percent)
+        print(dilation_data!.classLabelProbs["dilated"]!)
+        print(dilated_result)
+        
+        if(dilated_result > 0.0){
+            if(dilated_result + 0.5 < dilation_data!.classLabelProbs["dilated"]!){
+                print("WE ARE IN HERE WE'VE FINNA PASSED")
+                dilationResult.didPassTest(isDrunk: true, testNumber: 3)
+
+            } else {
+                print("WE ARE IN HERE WE'VE FINNA FAILED")
+                dilationResult.didPassTest(isDrunk: false, testNumber: 3)
+
+
+            }
+        } else{
+            defaults.set(dilation_data!.classLabelProbs["dilated"], forKey: defaultsKeys.dilated_percent)
+            dilationResult.didPassTest(isDrunk: false, testNumber: 3)
+
+        }
+        //decide drunk or not here
+//        dilationResult.didPassTest(isDrunk: true, testNumber: 3)
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

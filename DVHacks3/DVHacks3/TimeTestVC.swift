@@ -46,6 +46,8 @@ class TimeTestVC: UIViewController {
                 analyze_data()
             } else {
                 write_data()
+                timeResultDelegate.didPassTest(isDrunk: false, testNumber: 1)
+
             }
             self.dismiss(animated: true, completion: nil)
         }

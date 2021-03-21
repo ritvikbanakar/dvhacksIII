@@ -17,9 +17,13 @@ struct defaultsKeys {
     static let time_trial_1 = "TT1"
     static let time_trial_2 = "TT2"
     static let time_trial_3 = "TT3"
+    
+    static let time_to_spin = "spin_time"
+    
+    static let dilated_percent = "dilation_percent"
 }
 
-class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult {
+class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult, DilationTestResult {
     
     let defaults = UserDefaults.standard
     
@@ -53,6 +57,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
     var test1Complete = false
     var test2Complete = false
     var test3Complete = false
+    var result = 0
     
 
     override func viewDidLoad() {
@@ -243,16 +248,35 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
             newvc.spinResult = self
             self.present(newvc, animated: true, completion: nil)
         } else if(!test3Complete){
-            //Go to test3
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let newvc = storyboard.instantiateViewController(identifier: "dilationTest") as! DilationTestVC
+            newvc.modalPresentationStyle = .overFullScreen
+            newvc.dilationResult = self
+            self.present(newvc, animated: true, completion: nil)
+            
+        } else{
+            if(result > 0){
+                var storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let newvc = storyboard.instantiateViewController(identifier: "sobervc") as! SoberVC
+                newvc.modalPresentationStyle = .overFullScreen
+                self.present(newvc, animated: true, completion: nil)
+            } else{
+                var storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let newvc = storyboard.instantiateViewController(identifier: "drunkvc") as! DrunkVC
+                newvc.modalPresentationStyle = .overFullScreen
+                self.present(newvc, animated: true, completion: nil)
+            }
         }
     }
     
     func didPassTest(isDrunk: Bool, testNumber: Int) {
         if(isDrunk){
+            result -= 1
             switch testNumber {
             case 1:
                 test1Result.backgroundColor = UIColor(named: "Fail Color")
                 test1Complete = true
+                
             case 2:
                 test2Result.backgroundColor = UIColor(named: "Fail Color")
                 test2Complete = true
@@ -263,6 +287,7 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
                 print("something went wrong")
             }
         } else {
+            result += 1
             switch testNumber {
             case 1:
                 test1Result.backgroundColor = UIColor(named: "Pass Color")
@@ -275,8 +300,9 @@ class ViewController: UIViewController, TimeTestResultDelegate, SpinARTestResult
                 test3Complete = true
             default:
                 print("something went wrong")
-            }        }
-        test1Complete = true
+            }
+        }
+        
     }
     
     

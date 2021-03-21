@@ -38,7 +38,12 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
     var successButton: UIButton!
     var numErrors = 0
     var spinResult: SpinARTestResult!
+    var starting_time = 0
+    var is_test = false
+    let margin = 1.5
+    let defaults = UserDefaults.standard
 
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -83,7 +88,6 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         button.isHidden = true
         
         successButton = UIButton(frame: CGRect(x: self.view.frame.width / 2 - 100,y: self.view.frame.height + 200 ,width: 200,height: 200))
-        successButton.addTarget(self, action: #selector(self.successTapped), for: .touchUpInside)
         successButton.setImage(UIImage(named: "check"), for: .normal)
         
         self.view.addSubview(successButton)
@@ -106,6 +110,23 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
                     do {
                         sleep(1)
                     }
+                
+                    let final_time = Int(Date().timeIntervalSince1970)
+                    print(final_time)
+                    print(self.starting_time)
+                    let time_diff = final_time - self.starting_time
+                    let duration = self.defaults.integer(forKey: defaultsKeys.time_to_spin)
+                    print("DURATIONNNN \(duration)")
+                    if(duration > 0){
+                        if(Double(duration) * self.margin < Double(time_diff) || Double(duration)/self.margin > Double(time_diff)){
+                            self.spinResult.didPassTest(isDrunk: true, testNumber: 2)
+                        } else {
+                            self.spinResult.didPassTest(isDrunk: false, testNumber: 2)
+                        }
+                    } else {
+                        self.defaults.set(time_diff, forKey: defaultsKeys.time_to_spin)
+                    }
+                    
                     self.spinResult.didPassTest(isDrunk: false, testNumber: 2)
                     self.dismiss(animated: true, completion: nil)
                 })
@@ -196,10 +217,8 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         
     
     }
-    @objc func successTapped()
-    {
-        //segue back to home
-    }
+    
+   
 
     @objc func buttonTapped()
     {
@@ -222,7 +241,10 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
         
     }
     @objc func record() {
-//        self.progressTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)
+//        self.progressTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(updateProgress), userInfo: nil, repeats: true)\
+        starting_time = Int(Date().millisecondsSince1970)
+        print("WE ARE IN HERE")
+        print(starting_time)
         lm.startUpdatingHeading()
         stop_updated = false
         progressLabel.isHidden = false
@@ -359,19 +381,19 @@ class SpinVC: UIViewController ,CLLocationManagerDelegate, ARSCNViewDelegate {
     }
 */
     
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
+//    func session(_ session: ARSession, didFailWithError error: Error) {
+//        // Present an error message to the user
+//
+//    }
+//
+//    func sessionWasInterrupted(_ session: ARSession) {
+//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+//
+//    }
+//
+//    func sessionInterruptionEnded(_ session: ARSession) {
+//        // Reset tracking and/or remove existing anchors if consistent tracking is required
+//
+//    }
 
 }
